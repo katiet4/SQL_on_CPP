@@ -11,7 +11,7 @@
 #define ERROR_UNKNOW_SYMBOLS 876332
 #define ERROR_IN_EXPORT 87632221
 #define ERROR_UNKNOW_COMMAND 2993998
-
+#define ERROR_UNKNOW_TYPE 2284218
 
 class SQL
 {
@@ -129,7 +129,7 @@ class SQL
       }
 
       //check validations of types
-      vector<string> type = {"int", "string"};
+      vector<string> types = {"int", "string"};
 
       for(int i = 2; i < params.size(); i+=2){
         for(int j = 0; j < unknow_symbols.size(); j++){
@@ -137,10 +137,10 @@ class SQL
             return ERROR_UNKNOW_SYMBOLS;
           }
         }
-        if(find_string_in_vector(params[i], type)){
+        if(find_string_in_vector(params[i], types)){
           continue;
         }
-        return i;
+        return ERROR_UNKNOW_TYPE;
       }
 
       return 0;

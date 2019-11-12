@@ -17,6 +17,10 @@ int handler_of_error(int error, string command = ""){
     cout<<"Error unknow command "<<"'"<<command<<"'"<<" (Error: "<<error<<")"<<endl;
     return 0;
   }
+  else if(error == ERROR_UNKNOW_TYPE){
+    cout<<"Error unknow type (Error: "<<error<<")"<<endl;
+    return 0;
+  }
 
   else if(error == ERROR_NAME_REPITED){
     cout<<"Error name repited (Error: "<<error<<")"<<endl;
