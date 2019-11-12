@@ -1,65 +1,5 @@
 #include "sqlclass.h"
-
-int handler_of_error(int error, string command = ""){
-
-  if (error == ERROR_UNDEFINED)
-  {
-    cout<<"Error undefined (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-
-  else if(error == ERROR_UNKNOW_SYMBOLS){
-    cout<<"Error unknow symbols (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-
-  else if(error == ERROR_UNKNOW_COMMAND){
-    cout<<"Error unknow command "<<"'"<<command<<"'"<<" (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-  else if(error == ERROR_UNKNOW_TYPE){
-    cout<<"Error unknow type (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-
-  else if(error == ERROR_NAME_REPITED){
-    cout<<"Error name repited (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-
-  else if(error == ERROR_IN_NAME_OF_COLUMN)
-  {
-    cout<<"Error in name of column (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-
-  else if(error == ERROR_IN_DATA){
-    cout<<"Error in data (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-
-  else if(error == ERROR_OF_NAME)
-  {
-    cout<<"Error in name (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-  else if(error == ERROR_IN_COUNT_OF_DATA)
-  {
-    cout<<"Error in count of data (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-  else if(error == ERROR_IN_EXPORT)
-  {
-    cout<<"Error in export (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-  else if(error)
-  {
-    cout<<"Error in type (Error: "<<error<<")"<<endl;
-    return 0;
-  }
-  return 1;
-}
+int handler_of_error(int error, string command = "");
 
 int main()
 {
@@ -192,4 +132,65 @@ int main()
 
 
   return 0;
+}
+
+int handler_of_error(int error, string command = ""){
+
+  if (error == ERROR_UNDEFINED)
+  {
+    cout<<"Error undefined (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+
+  else if(error == ERROR_UNKNOW_SYMBOLS){
+    cout<<"Error unknow symbols (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+
+  else if(error == ERROR_UNKNOW_COMMAND){
+    cout<<"Error unknow command "<<"'"<<command<<"'"<<" (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+  else if(error == ERROR_UNKNOW_TYPE){
+    cout<<"Error unknow type (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+
+  else if(error == ERROR_NAME_REPITED){
+    cout<<"Error name repited (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+
+  else if(error == ERROR_IN_NAME_OF_COLUMN)
+  {
+    cout<<"Error in name of column (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+
+  else if(error == ERROR_IN_DATA){
+    cout<<"Error in data (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+
+  else if(error == ERROR_OF_NAME)
+  {
+    cout<<"Error in name (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+  else if(error == ERROR_IN_COUNT_OF_DATA)
+  {
+    cout<<"Error in count of data (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+  else if(error == ERROR_IN_EXPORT)
+  {
+    cout<<"Error in export (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+  else if(error)
+  {
+    cout<<"Error in type (Error: "<<error<<")"<<endl;
+    return 0;
+  }
+  return 1;
 }
